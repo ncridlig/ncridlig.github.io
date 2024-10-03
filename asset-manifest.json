@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b1a3edc1.css",
+    "main.js": "/static/js/main.b20d5b08.js",
+    "static/js/453.9b1a9f3d.chunk.js": "/static/js/453.9b1a9f3d.chunk.js",
+    "static/media/nicolascridlig.png": "/static/media/nicolascridlig.b92d7d4b782311bd19d9.png",
+    "static/media/resume.pdf": "/static/media/resume.0ea81c3d796c91e2d1bb.pdf",
+    "static/media/smll.png": "/static/media/smll.084100dd06888445edd2.png",
+    "static/media/sio.png": "/static/media/sio.adfc573a8d87e072502c.png",
+    "static/media/sdhs.png": "/static/media/sdhs.d6aad5e429def3a2d5fd.png",
+    "static/media/ucsd.png": "/static/media/ucsd.2649a60c1dbcfddb44f1.png",
+    "static/media/ifc.png": "/static/media/ifc.19acdf529ad7fcf1c9f4.png",
+    "static/media/ubm.png": "/static/media/ubm.ac9f8028d85076c4a7fd.png",
+    "static/media/bsa.png": "/static/media/bsa.f6afdd85a30a4e5a323d.png",
+    "index.html": "/index.html",
+    "main.b1a3edc1.css.map": "/static/css/main.b1a3edc1.css.map",
+    "main.b20d5b08.js.map": "/static/js/main.b20d5b08.js.map",
+    "453.9b1a9f3d.chunk.js.map": "/static/js/453.9b1a9f3d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1a3edc1.css",
+    "static/js/main.b20d5b08.js"
+  ]
+}
