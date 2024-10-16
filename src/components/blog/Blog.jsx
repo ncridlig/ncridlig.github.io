@@ -12,6 +12,7 @@ const Blog = (props) => {
             key={index}
             title={value.title}
             description={value.description}
+            image={value.image}
             index={index}
           />
         );
@@ -26,7 +27,7 @@ const BlogCard = ({ index, title, image, description }) => {
       <div className="">
         <div className="row">
           <div className="col-4 col-lg-12">
-            {/* <img src={image} className="card-img" alt="..." /> */}
+            <img src={image} className="card-img" alt="..." style={{ width: "100px", height: "100px", objectFit: "cover", border: "1px solid black", borderRadius: "5px", boxShadow: "0 8px 16px rgba(0, 0, 0, 0.3)" }} />
           </div>
           <div className="col-8 col-lg-12">
             <div className="">

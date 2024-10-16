@@ -30,7 +30,7 @@
     "eject": "react-scripts eject",
     "custom-deploy": "node pages.js"
   },
-  "proxy": "http://localhost:3000", 
+  "proxy": "http://localhost:3000",
   "engines": {
     "npm": "^10.2.3",
     "node": "^20.10.0"

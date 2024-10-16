@@ -47,7 +47,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Nicolas Ivan Cridlig. I will be a graduate in 2025 from University of Bologna in Italy with a masters degree in Artificial Intelligence. One of my passions is to speak all the Romance Languages.",
-  resume: process.env.PUBLIC_URL + "/resume.pdf",
+  resume: process.env.PUBLIC_URL + "/nicolascridligcv.pdf",
 };
 
 // PROJECTS SECTION
@@ -59,7 +59,7 @@ const repos = {
   show: true,
   heading: "Recent Projects",
   gitHubUsername: "ncridlig", //i.e."johnDoe12Gh"
-  reposLength: 4,
+  reposLength: 6,
   specificRepos: [],
 };
 
