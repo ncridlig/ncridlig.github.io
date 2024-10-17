@@ -68,8 +68,6 @@
 
 # About the project
 
-[![Site preview](/public/social-image.png)](https://hashirshoaeb.github.io/home)
-
 
 ## Technology stack
 
@@ -190,4 +188,4 @@ Novas contribuições e revisões na tradução são muito bem vindas!
 
 # Clarifications
 
-Make sure to run everything at: https://create-react-app.dev/docs/deployment, I was skipping npm install --save gh-pages
+Make sure to run everything at: https://create-react-app.dev/docs/deployment, I was skipping npm install --save gh-pages. If you still face issues, check your Github key and NodeJS installation. I plan to add automatic formatting for photos and embedded videos on phones, and a blog page that views all the entries.
