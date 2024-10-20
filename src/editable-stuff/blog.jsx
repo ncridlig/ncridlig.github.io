@@ -76,7 +76,23 @@ const blog1 = new BlogBuilder({
   .addVideo("https://youtu.be/_9cp5MPo1r4?si=_J6iBY0Xf8V-vtzl")
   .addFooter("October 15, 2024");
 
+  const blog4 = new BlogBuilder({
+    title: "Deploying Home Assistant",
+    image: "/drone.png",
+    description:
+      "Years long process..."
+  })
+  .addHeading("Is a board an image?")
+  .addParagraph(
+    "A unique use case for Convolutional Neural Networks..."
+  )
+  .addVideo("https://youtu.be/4uyaCkAwKLU?si=NeWwT9pevr9odWtG")
+  .addVideo("https://youtu.be/_9cp5MPo1r4?si=_J6iBY0Xf8V-vtzl")
+  .addFooter("October 15, 2024");
+
+// bloglist.push(blog4);
 // bloglist.push(blog3);
+
 bloglist.push(blog2);
 bloglist.push(blog1);
 bloglist.push(blog);
