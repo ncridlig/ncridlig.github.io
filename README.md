@@ -189,3 +189,5 @@ Novas contribuições e revisões na tradução são muito bem vindas!
 # Clarifications
 
 Make sure to run everything at: https://create-react-app.dev/docs/deployment, I was skipping npm install --save gh-pages. If you still face issues, check your Github key and NodeJS installation. I plan to add automatic formatting for photos and embedded videos on phones, and a blog page that views all the entries.
+
+For future reference, there are two branches with separate scopes. Master contains the codebase, while main contains the site which GitHub Pages automatically deploys. Therefore, to update the site, code in master, then build with npm locally and push that site to main. Do not forget to push your changes to the codebase to master as well, for next time. To update your CV, since it is a static file, do not rebuild, but on the main branch modify the file and push, that's all.
