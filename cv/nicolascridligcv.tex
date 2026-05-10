@@ -1,50 +1,9 @@
 % ============================================================
-% Nicolas Ivan Cridlig — CV
-% Compiled with: pdflatex
-% Auto-compiled via GitHub Actions on push to cv/
+% Nicolas Ivan Cridlig — CV (English)
 % ============================================================
 \documentclass[11pt,a4paper]{article}
+\usepackage{cv-style}
 
-% --- Packages ---
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-\usepackage[margin=0.75in]{geometry}
-\usepackage{enumitem}
-\usepackage{xcolor}
-\usepackage{hyperref}
-\usepackage{titlesec}
-\usepackage{multicol}
-
-% --- Colors ---
-\definecolor{accent}{HTML}{2B579A}   % blue accent
-\definecolor{dark}{HTML}{1A1A1A}     % near-black
-\definecolor{gray}{HTML}{666666}     % secondary text
-
-% --- Hyperlinks ---
-\hypersetup{
-  colorlinks=true,
-  linkcolor=accent,
-  urlcolor=accent
-}
-
-% --- Spacing ---
-\setlength{\parskip}{0pt}
-\setlength{\parindent}{0pt}
-\setlist{nosep,left=0pt,label=--}
-
-% --- Section formatting ---
-\titleformat{\section}
-  {\Large\bfseries\color{accent}}
-  {}
-  {0em}
-  {}
-  [\vspace{-0.5em}\rule{\textwidth}{1pt}\vspace{0.3em}]
-
-\titlespacing{\section}{0pt}{1.2em}{0.4em}
-
-% ============================================================
 \begin{document}
 
 % --- HEADER ---
@@ -56,11 +15,11 @@
 
   \vspace{0.5em}
   \begin{tabular}{c}
-    \href{mailto:ncridlig@gmail.com}{ncridlig@gmail.com} \quad
-    +1\,858-722-2735 \quad
-    \href{https://ncridlig.github.io}{ncridlig.github.io} \\[2pt]
-    \href{https://github.com/ncridlig}{github.com/ncridlig} \quad
-    \href{https://linkedin.com/in/nicolas-cridlig-161451133}{linkedin.com/in/nicolas-cridlig}
+    \href{mailto:\cvemail}{\cvemail} \quad
+    \cvphone \quad
+    \href{https://\cvwebsite}{\cvwebsite} \\[2pt]
+    \href{https://\cvgithub}{\cvgithub} \quad
+    \href{https://\cvlinkedin}{\cvlinkedin}
   \end{tabular}
 \end{center}
 
@@ -68,7 +27,7 @@
 
 % --- SUMMARY ---
 \section{Summary}
-Master's graduate in Artificial Intelligence from the University of Bologna, specializing in Computer Vision, Large Language Models, and Industry 4.0. Seeking leadership roles in product design and development. I deliver innovative, user-centric solutions with a focus on mathematical rigor and excellence, excelling in prototyping and driving projects to completion.
+Master's graduate in Artificial Intelligence from the University of Bologna, specializing in Computer Vision, Large Language Models, and Industry~4.0. Seeking leadership roles in product design and development. I deliver innovative, user-centric solutions with a focus on mathematical rigor and excellence, excelling in prototyping and driving projects to completion.
 
 % --- SKILLS ---
 \section{Skills}
@@ -98,7 +57,7 @@ End-to-end computer vision exercise identification and logging, with user identi
 \noindent
 \textbf{UniBo Motorsport} \hfill \textit{Bologna, Italy}\\
 \textit{Driverless AI Division Manager} \hfill Sep 2023 -- Present (2 years)\\
-Fully autonomous Formula 1 competitions at the university level, ranked \#1 in the world. 250+ members. Led the AI division designing perception, planning, and control systems for a driverless racecar.
+Fully autonomous Formula~1 competitions at the university level, ranked \#1 in the world. 250+ members. Led the AI division designing perception, planning, and control systems for a driverless racecar.
 
 \vspace{0.5em}
 \noindent
@@ -110,7 +69,7 @@ Created an underwater acoustic dataset for marine mammals then trained a PyTorch
 \noindent
 \textbf{Scripps Institute of Oceanography} \hfill \textit{San Diego, USA}\\
 \textit{Marine Bioacoustics Laboratory IT Supervisor} \hfill Oct 2019 -- Dec 2022 (3 years)\\
-Managed 10Gb fiber-optic network servers. Transitioned fifty users from in-office to remote during the COVID-19 crisis. Designed, deployed, and repaired computer systems.
+Managed 10\,Gb fiber-optic network servers. Transitioned fifty users from in-office to remote during the COVID-19 crisis. Designed, deployed, and repaired computer systems.
 
 \vspace{0.5em}
 \noindent

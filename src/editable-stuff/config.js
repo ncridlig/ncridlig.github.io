@@ -48,6 +48,7 @@ const about = {
   message:
     "My name is Nicolas Ivan Cridlig. I will be a graduate in 2025 from University of Bologna in Italy with a masters degree in Artificial Intelligence. One of my passions is to speak all the Romance Languages.",
   resume: process.env.PUBLIC_URL + "/nicolascridligcv.pdf",
+  resumeFr: process.env.PUBLIC_URL + "/nicolascridligcv-fr.pdf",
 };
 
 // PROJECTS SECTION

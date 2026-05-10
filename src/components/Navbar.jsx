@@ -51,6 +51,14 @@ const Navigation = React.forwardRef((props, ref) => {
           >
             CV
           </NavLink>
+          <NavLink
+            className="nav-item lead"
+            href={about.resumeFr}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            CV (FR)
+          </NavLink>
           {about.show && (
             <NavLink
               className="nav-item lead"

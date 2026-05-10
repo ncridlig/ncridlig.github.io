@@ -1,0 +1,51 @@
+% ============================================================
+% cv-style.sty — Shared style for Nicolas Cridlig's CVs
+% Used by both English and French versions
+% ============================================================
+\ProvidesPackage{cv-style}
+
+% --- Packages ---
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\RequirePackage[margin=0.75in]{geometry}
+\RequirePackage{enumitem}
+\RequirePackage{xcolor}
+\RequirePackage{hyperref}
+\RequirePackage{titlesec}
+\RequirePackage{multicol}
+
+% --- Colors ---
+\definecolor{accent}{HTML}{2B579A}   % blue accent
+\definecolor{dark}{HTML}{1A1A1A}     % near-black
+\definecolor{gray}{HTML}{666666}     % secondary text
+
+% --- Hyperlinks ---
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent
+}
+
+% --- Spacing ---
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlist{nosep,left=0pt,label=--}
+
+% --- Section formatting ---
+\titleformat{\section}
+  {\Large\bfseries\color{accent}}
+  {}
+  {0em}
+  {}
+  [\vspace{-0.5em}\rule{\textwidth}{1pt}\vspace{0.3em}]
+
+\titlespacing{\section}{0pt}{1.2em}{0.4em}
+
+% --- Shared contact macros ---
+\newcommand{\cvemail}{ncridlig@gmail.com}
+\newcommand{\cvphone}{+1\,858-722-2735}
+\newcommand{\cvwebsite}{ncridlig.github.io}
+\newcommand{\cvgithub}{github.com/ncridlig}
+\newcommand{\cvlinkedin}{linkedin.com/in/nicolas-cridlig}
