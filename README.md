@@ -7,7 +7,7 @@
     It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects and forked from Hashir Shoaeb's template.
     <br/>
     <strong>Site URL / Demo » </strong> 
-    <a href="https://ncridlig.github.io/home">ncridlig.github.io/home</a>
+    <a href="https://ncridlig.github.io">ncridlig.github.io</a>
     <br />
     <br />
     <a href="https://hashirshoaeb.github.io">About Hashier Shoaeb</a>
