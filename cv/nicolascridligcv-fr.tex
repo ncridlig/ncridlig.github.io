@@ -123,9 +123,16 @@ San Diego High School, États-Unis
 \end{itemize}
 \end{multicols}
 
-\vspace{1em}
-\begin{flushright}
-  \includegraphics[width=1.8cm]{qr-website.jpg}
-\end{flushright}
+\vspace{1.5em}
+\noindent
+\fbox{%
+  \begin{minipage}[c]{\dimexpr\linewidth-2\fboxsep-2\fboxrule-2.3cm\relax}
+    \centering
+    \textbf{Scannez pour voir le portfolio complet} \\[3pt]
+    {\small\color{gray} \href{https://ncridlig.github.io}{ncridlig.github.io}}
+  \end{minipage}%
+  \hfill
+  \raisebox{-0.1cm}{\includegraphics[width=2cm,height=2cm]{qr-website.jpg}}%
+}
 
 \end{document}
