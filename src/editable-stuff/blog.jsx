@@ -1,52 +1,50 @@
 import { BlogBuilder } from "../components/blog/BlogBuilder";
 
-export function createBlogPosts(t) {
-  const buildPost = (key) => {
-    const data = t(`blog:${key}`, { returnObjects: true });
+const POST_KEYS = ["thesis", "drone", "roscar", "sacmi"];
 
-    const post = new BlogBuilder({
-      title: data.title,
-      image: data.image,
-      description: data.description,
-    });
+let _idCounter = 0;
+const nextId = () => ++_idCounter;
 
-    for (const item of data.content) {
-      switch (item.type) {
-        case "heading":
-          post.addHeading(item.text);
-          break;
-        case "paragraph":
-          post.addParagraph(item.text);
-          break;
-        case "linkParagraph":
-          post.addLinkParagraph(item.text, item.linkText, item.linkUrl);
-          break;
-        case "image":
-          post.addImage(item.url);
-          break;
-        case "video":
-          post.addVideo(item.url);
-          break;
-        default:
-          break;
-      }
+function buildPost(key, t) {
+  const data = t(`blog:${key}`, { returnObjects: true });
+
+  const post = new BlogBuilder({
+    title: data.title,
+    image: data.image,
+    description: data.description,
+  });
+
+  for (const item of data.content) {
+    switch (item.type) {
+      case "heading":
+        post.addHeading(nextId(), item.text);
+        break;
+      case "paragraph":
+        post.addParagraph(nextId(), item.text);
+        break;
+      case "linkParagraph":
+        post.addLinkParagraph(nextId(), item.text, item.linkText, item.linkUrl);
+        break;
+      case "image":
+        post.addImage(nextId(), item.url);
+        break;
+      case "video":
+        post.addVideo(nextId(), item.url);
+        break;
+      default:
+        break;
     }
+  }
 
-    post.addFooter(data.footer);
-    return post;
-  };
+  post.addFooter(nextId(), data.footer);
+  return post;
+}
 
-  const posts = [];
+export function createBlogPosts(t) {
+  return POST_KEYS.map((key) => buildPost(key, t));
+}
 
-  // Published posts (newest first)
-  posts.push(buildPost("thesis"));
-  posts.push(buildPost("drone"));
-  posts.push(buildPost("roscar"));
-  posts.push(buildPost("sacmi"));
-
-  // Drafts — uncomment when ready:
-  // posts.push(buildPost("homeAssistant"));
-  // posts.push(buildPost("othello"));
-
-  return posts;
+export function createBlogPost(index, t) {
+  if (index < 0 || index >= POST_KEYS.length) return null;
+  return buildPost(POST_KEYS[index], t);
 }

@@ -18,36 +18,35 @@ const API = "https://api.github.com";
 
 const Project = ({ username, length, specfic }) => {
   const { t } = useTranslation();
-  const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
-  const specficReposAPI = `${API}/repos/${username}`;
-  const dummyProjectsArr = new Array(length + specfic.length).fill(
-    dummyProject
-  );
-
   const [projectsArray, setProjectsArray] = useState([]);
 
   const fetchRepos = useCallback(async () => {
-    let repoList = [];
     try {
+      const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
+      const specficReposAPI = `${API}/repos/${username}`;
       const response = await axios.get(allReposAPI);
-      repoList = [...response.data.slice(0, length)];
-      try {
-        for (let repoName of specfic) {
-          const response = await axios.get(`${specficReposAPI}/${repoName}`);
-          repoList.push(response.data);
-        }
-      } catch (error) {
-        console.error(error.message);
+      const repoList = [...response.data.slice(0, length)];
+
+      if (specfic.length > 0) {
+        const specifics = await Promise.all(
+          specfic.map((repoName) =>
+            axios.get(`${specficReposAPI}/${repoName}`).then((r) => r.data)
+          )
+        );
+        repoList.push(...specifics);
       }
+
       setProjectsArray(repoList);
     } catch (error) {
       console.error(error.message);
     }
-  }, [allReposAPI, length, specfic, specficReposAPI]);
+  }, [username, length, specfic]);
 
   useEffect(() => {
     fetchRepos();
   }, [fetchRepos]);
+
+  const dummyProjectsArr = new Array(length + specfic.length).fill(dummyProject);
 
   return (
     <Jumbotron fluid id="projects" className="bg-light m-0">
@@ -55,17 +54,15 @@ const Project = ({ username, length, specfic }) => {
         <h2 className="display-4 pb-5 text-center">{t('home:projectsHeading')}</h2>
         <Row>
           {projectsArray.length
-            ? projectsArray.map((project, index) => (
+            ? projectsArray.map((project) => (
               <ProjectCard
-                key={`project-card-${index}`}
-                id={`project-card-${index}`}
+                key={project.name || project.svn_url || Math.random()}
                 value={project}
               />
             ))
             : dummyProjectsArr.map((project, index) => (
               <ProjectCard
                 key={`dummy-${index}`}
-                id={`dummy-${index}`}
                 value={project}
               />
             ))}

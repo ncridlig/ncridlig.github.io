@@ -75,7 +75,7 @@ const App = () => {
       {navBar.show && <Navbar ref={titleRef} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog" element={blog.show ? <Blog /> : <Home ref={titleRef} />} />
         <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
       <Footer>

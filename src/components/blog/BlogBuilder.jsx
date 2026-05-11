@@ -9,9 +9,9 @@ class BlogBuilder {
     this.description = description;
   }
 
-  addImage = (imageSrc) => {
+  addImage = (id, imageSrc) => {
     this.list.push(
-      <div key={this.list.length} className="text-center my-4">
+      <div key={id} className="text-center my-4">
         <img
           src={imageSrc}
           alt="Blog"
@@ -23,37 +23,37 @@ class BlogBuilder {
     return this;
   };
 
-  addParagraph = (props) => {
+  addParagraph = (id, text) => {
     this.list.push(
-      <p key={this.list.length} className="lead">
-        {props}
+      <p key={id} className="lead">
+        {text}
       </p>
     );
     return this;
   };
 
-  addHeading = (props) => {
+  addHeading = (id, text) => {
     this.list.push(
-      <Fragment key={this.list.length}>
-        <h1 className="">{props}</h1>
+      <Fragment key={id}>
+        <h1>{text}</h1>
         <hr />
       </Fragment>
     );
     return this;
   };
 
-  addFooter = (date) => {
+  addFooter = (id, date) => {
     this.list.push(
-      <footer key={this.list.length} className="text-muted text-center mt-5">
+      <footer key={id} className="text-muted text-center mt-5">
         <p>Written on: {date}</p>
       </footer>
     );
     return this;
   };
 
-  addLinkParagraph = (text, linkText, linkUrl) => {
+  addLinkParagraph = (id, text, linkText, linkUrl) => {
     this.list.push(
-      <p key={this.list.length} className="lead">
+      <p key={id} className="lead">
         {text}{" "}
         <a href={linkUrl} target="_blank" rel="noopener noreferrer">
           {linkText}
@@ -63,9 +63,9 @@ class BlogBuilder {
     return this;
   };
 
-  addVideo = (videoUrl) => {
+  addVideo = (id, videoUrl) => {
     this.list.push(
-      <div key={this.list.length} className="ratio ratio-16x9 my-4" style={{ maxWidth: "720px", marginLeft: "auto", marginRight: "auto" }}>
+      <div key={id} className="ratio ratio-16x9 my-4" style={{ maxWidth: "720px", marginLeft: "auto", marginRight: "auto" }}>
         <iframe
           src={videoUrl}
           title="YouTube video player"

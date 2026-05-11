@@ -20,8 +20,8 @@ const Experience = () => {
           </h2>
           <Row>
             {
-              experiences.map((data, index) => {
-                return <ExperienceCard key={index} data={data} />
+              experiences.map((data) => {
+                return <ExperienceCard key={data.role} data={data} />
               })
             }
           </Row>

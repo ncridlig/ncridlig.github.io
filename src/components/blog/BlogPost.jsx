@@ -1,18 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
-import { createBlogPosts } from "../../editable-stuff/blog";
+import { createBlogPost } from "../../editable-stuff/blog";
+
+const POST_COUNT = 4;
 
 const BlogPost = () => {
   const { t } = useTranslation();
   const { id } = useParams();
-  const bloglist = createBlogPosts(t);
-  const post = bloglist[id];
-  const lastIndex = bloglist.length - 1;
+  const idx = Number(id);
+  const lastIndex = POST_COUNT - 1;
+
+  const post = useMemo(() => createBlogPost(idx, t), [idx, t]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [id]);
+  }, [idx]);
 
   return (
     <div className="container-lg mt-5">
@@ -29,9 +32,9 @@ const BlogPost = () => {
 
           <nav className="d-flex justify-content-between align-items-center mt-5 pt-4 border-top">
             <div>
-              {id > 0 && (
+              {idx > 0 && (
                 <Link
-                  to={`${process.env.PUBLIC_URL}/blog/${Number(id) - 1}`}
+                  to={`${process.env.PUBLIC_URL}/blog/${idx - 1}`}
                   className="btn btn-outline-primary"
                 >
                   &larr; {t("common:blog.previous")}
@@ -42,9 +45,9 @@ const BlogPost = () => {
               {t("common:blog.allPosts")}
             </Link>
             <div>
-              {id < lastIndex && (
+              {idx < lastIndex && (
                 <Link
-                  to={`${process.env.PUBLIC_URL}/blog/${Number(id) + 1}`}
+                  to={`${process.env.PUBLIC_URL}/blog/${idx + 1}`}
                   className="btn btn-outline-primary"
                 >
                   {t("common:blog.next")} &rarr;
