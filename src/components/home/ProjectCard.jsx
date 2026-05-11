@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
@@ -38,22 +39,24 @@ const ProjectCard = ({ value }) => {
 };
 
 const CardButtons = ({ svn_url }) => {
+  const { t } = useTranslation();
   return (
     <div className="d-grid gap-2 d-md-block">
       <a
         href={`${svn_url}/archive/master.zip`}
         className="btn btn-outline-secondary mx-2"
       >
-        <i className="fab fa-github" /> Clone Project
+        <i className="fab fa-github" /> {t('common:project.cloneProject')}
       </a>
       <a href={svn_url} target=" _blank" className="btn btn-outline-secondary mx-2">
-        <i className="fab fa-github" /> Repo
+        <i className="fab fa-github" /> {t('common:project.repo')}
       </a>
     </div>
   );
 };
 
 const Language = ({ languages_url, repo_url }) => {
+  const { t } = useTranslation();
   const [data, setData] = useState([]);
 
   const handleRequest = useCallback(async () => {
@@ -78,7 +81,7 @@ const Language = ({ languages_url, repo_url }) => {
 
   return (
     <div className="pb-3">
-      Languages:{" "}
+      {t('common:project.languages')}{" "}
       {array.length
         ? array.map((language) => (
           <a
@@ -93,14 +96,14 @@ const Language = ({ languages_url, repo_url }) => {
               {Math.trunc((data[language] / total_count) * 1000) / 10} %
             </span>
           </a>
-
         ))
-        : "code yet to be deployed."}
+        : t('common:project.codeNotDeployed')}
     </div>
   );
 };
 
 const CardFooter = ({ star_count, repo_url, pushed_at }) => {
+  const { t, i18n } = useTranslation();
   const [updated_at, setUpdated_at] = useState("0 mints");
 
   const handleUpdatetime = useCallback(() => {
@@ -110,15 +113,16 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
     const hours = Math.trunc(diff / 1000 / 60 / 60);
 
     if (hours < 24) {
-      if (hours < 1) return setUpdated_at("just now");
-      let measurement = hours === 1 ? "hour" : "hours";
-      return setUpdated_at(`${hours.toString()} ${measurement} ago`);
+      if (hours < 1) return setUpdated_at(t('common:project.justNow'));
+      if (hours === 1) return setUpdated_at(`${hours} ${t('common:project.hourAgo')}`);
+      return setUpdated_at(`${hours} ${t('common:project.hoursAgo', { count: hours })}`);
     } else {
+      const locale = i18n.language === "fr" ? "fr-FR" : "en-US";
       const options = { day: "numeric", month: "long", year: "numeric" };
-      const time = new Intl.DateTimeFormat("en-US", options).format(date);
-      return setUpdated_at(`on ${time}`);
+      const time = new Intl.DateTimeFormat(locale, options).format(date);
+      return setUpdated_at(`${t('common:project.on')} ${time}`);
     }
-  }, [pushed_at]);
+  }, [pushed_at, t, i18n.language]);
 
   useEffect(() => {
     handleUpdatetime();
@@ -132,11 +136,11 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
         className="text-dark text-decoration-none"
       >
         <span className="text-dark card-link mr-4">
-          <i className="fab fa-github" /> Stars{" "}
+          <i className="fab fa-github" /> {t('common:project.stars')}{" "}
           <span className="badge badge-dark">{star_count}</span>
         </span>
       </a>
-      <small className="text-muted">Updated {updated_at}</small>
+      <small className="text-muted">{t('common:project.updated')} {updated_at}</small>
     </p>
   );
 };

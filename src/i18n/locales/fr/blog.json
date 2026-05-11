@@ -1,0 +1,83 @@
+{
+  "sacmi": {
+    "title": "Visite de SACMI",
+    "description": "La raison pour laquelle je suis passé du Génie Électrique à l'Intelligence Artificielle...",
+    "image": "/sacmi.png",
+    "content": [
+      { "type": "heading", "text": "Un Intérêt Grandissant pour l'IA" },
+      { "type": "paragraph", "text": "Je suis arrivé à Bologne à l'automne 2021 en tant qu'étudiant international venu de San Diego. Mes études étaient en Génie Électrique. Cependant, à UniBo, j'ai suivi le cours Intelligence Artificielle dans l'Industrie. Ce cours m'a convaincu de me réorienter vers l'IA. Je me souviens très bien de la visite de SACMI (Società Anonima Cooperativa Meccanici Imola) comme preuve que l'IA était capable d'automatiser des tâches complexes avec une précision surhumaine. Je ne connaissais pas l'entreprise auparavant, SACMI est basée à Imola en Italie et se spécialise dans la fabrication et l'emballage." },
+      { "type": "paragraph", "text": "La visite de l'usine SACMI était organisée en une présentation puis des démonstrations guidées. On nous a montré un robot d'inspection de défauts céramiques, capable de saisir des toilettes, des éviers ou d'autres objets céramiques complexes et de les faire tourner tout en inspectant la surface pour détecter les fissures ou les défauts d'émaillage. Son avantage sur les humains était de ne pas souffrir de fatigue oculaire, de maintenir sa concentration et de pouvoir fonctionner 24 heures sur 24. Nous sommes également allés dans une salle qui embouteillait des canettes de soda. La machine utilisait la vision par ordinateur pour inspecter les bouteilles dont le joint de capsule était mal formé et les écarter, à des vitesses si rapides que nous ne voyions qu'un flou. Comme vous pouvez l'entendre dans la vidéo, j'étais très impressionné. SACMI et l'IA dans l'Industrie m'ont convaincu que l'IA se développait rapidement et pouvait utiliser mes compétences à leur plein potentiel." },
+      { "type": "paragraph", "text": "Après la visite, SACMI a eu la gentillesse de créer une vidéo de la journée. Regardez-la ici :" },
+      { "type": "video", "url": "https://www.youtube.com/embed/9pB7XvaKaRM?si=kkqhAbYfsjqrXvJI" }
+    ],
+    "footer": "14 octobre 2024"
+  },
+  "roscar": {
+    "title": "Véhicule Autonome avec Open CV",
+    "description": "Apprendre est meilleur en groupe...",
+    "image": "/roscar.png",
+    "content": [
+      { "type": "heading", "text": "Robot Operating System" },
+      { "type": "paragraph", "text": "Lors de ma deuxième année à UCSD, j'ai postulé pour le cours Introduction aux Véhicules Autonomes. Cette expérience était ouverte à un petit nombre de candidats, principalement des troisième et quatrième années, mais le professeur m'a accepté sur mes mérites. Je ne savais pas à quel point cela me préparerait pour UniBo Motorsport deux ans plus tard. C'est parce que cela m'a donné une brillante introduction à ROS, le firmware open source utilisé partout en robotique. En bref, ROS permet aux composants de communiquer entre eux en utilisant des topics, qui s'abonnent ou publient vers d'autres nœuds. Il gère également les packages et les dépendances, tout en permettant un fonctionnement en temps réel." },
+      { "type": "image", "url": "/roscarmods.png" },
+      { "type": "heading", "text": "Navigation Autonome" },
+      { "type": "paragraph", "text": "Le projet phare de ce cours était de créer un véhicule capable de navigation autonome. C'était un véritable projet de groupe, qui a amélioré mes compétences en gestion du temps et en communication. Mes coéquipiers étaient deux ingénieurs mécaniciens et un étudiant en mathématiques appliquées, et j'étais l'ingénieur électricien. Nous avons commencé par modifier un modèle réduit Traxxas Slash à l'échelle 1/10 en ajoutant un support de caméra solide imprimé en 3D. Nous avons également ajouté une plaque acrylique avec des trous de montage pour l'ordinateur monocarte, le régulateur de tension, le relais et le câblage. Elle avait une inclinaison réglable, ce qui était important pour ajuster la distance de vision. Ensuite, en utilisant OpenCV, nous avons traité les données de la caméra pour identifier les limites et la ligne centrale de la piste, puis conduire le long de celle-ci. De temps en temps, la voiture essayait de s'enfuir, alors nous avons intégré un arrêt d'urgence avec une télécommande qui déclenchait le relais lorsqu'on appuyait dessus. Cela nous a appris le dépannage car nous avions un problème intermittent avec l'arrêt d'urgence, que nous avons réussi à identifier comme provenant d'une pile bouton défectueuse. On pourrait croire que cela aurait dû être la première étape du dépannage, et c'était le cas, mais nous n'avions pas mesuré la tension de la pile sous charge, donc le problème nous a échappé. Cela en particulier, je m'en souviens lors du dépannage, pour ne rien prendre pour acquis." },
+      { "type": "linkParagraph", "text": "Un grand merci au projet d'archive web pour avoir sauvegardé le site du projet. Vous pouvez le consulter pour plus de détails, photos et vidéos :", "linkText": "2020FallTeam5", "linkUrl": "https://web.archive.org/web/20220701100242/https://guitar.ucsd.edu/maeece148/index.php/2020FallTeam5" },
+      { "type": "video", "url": "https://www.youtube.com/embed/2VcuRZCTn6M?si=tLe8Bsdi5IWWOz1h" }
+    ],
+    "footer": "15 octobre 2024"
+  },
+  "drone": {
+    "title": "Pilote de Drone FPV",
+    "description": "Certains construisent des ordinateurs. Moi, je construis des machines volantes acrobatiques...",
+    "image": "/drone.png",
+    "content": [
+      { "type": "heading", "text": "FPV = First Person View" },
+      { "type": "paragraph", "text": "Les aéronefs radiocommandés sont mon plus ancien hobby. Ma mère a de l'expérience dans le pilotage de petits avions, et mon père aime bricoler. À partir de 11 ans, quand on m'a offert une voiture radiocommandée, la Losi Mini-T, j'ai commencé à vouloir l'emmener dans la troisième dimension. En première année de lycée, j'avais assez économisé pour acheter les pièces d'un drone QAV210 chez un vendeur chinois. Elles sont arrivées un mois plus tard, et j'ai construit le drone en suivant des tutoriels sur YouTube. J'ai appris tout seul à souder, à utiliser un multimètre et à dépanner. C'était addictif. J'ai cherché des amis dans le hobby mais j'étais trop jeune pour conduire et souvent je n'avais pas d'autre choix que de voler seul au parc. Je volais, je crashais, je reconstruisais... pendant des mois ! Finalement, j'ai maîtrisé le vol à vue et j'ai investi dans des lunettes FPV. Celles-ci utilisent une caméra à l'avant du drone pour fournir une vue cockpit à faible latence. Elles sont très immersives. Avec le temps, je me suis amélioré dans la construction de drones. Ils avaient plus d'autonomie, plus de portée et de meilleures caméras." },
+      { "type": "paragraph", "text": "Pendant l'été 2020, c'était encore le confinement covid, mais j'ai formé un groupe soudé de pilotes et nous volions ensemble. Mes compétences ont énormément progressé. J'ai commencé à plonger le long des bâtiments, à faire des loopings autour des grues et à survoler l'océan. J'ai investi dans une GoPro Hero 11 pour filmer mes vols et j'ai passé du temps à réduire le bruit électronique et les vibrations, ce qui a amélioré la qualité vidéo. Regardez l'un de mes vols ici :" },
+      { "type": "video", "url": "https://www.youtube.com/embed/ulzixaiELEM?si=qhR_orQfUxvyr7_u" }
+    ],
+    "footer": "15 octobre 2024"
+  },
+  "othello": {
+    "title": "Créer un Joueur d'Othello",
+    "description": "Exploiter mes CNNs pour jouer à un jeu de plateau classique...",
+    "image": "/othello.png",
+    "content": [
+      { "type": "heading", "text": "Un Plateau est-il une Image ?" },
+      { "type": "paragraph", "text": "Un cas d'utilisation unique des Réseaux de Neurones Convolutifs consiste à représenter les plateaux de jeu comme des images et à entraîner un modèle à évaluer les positions." }
+    ],
+    "footer": "À déterminer"
+  },
+  "homeAssistant": {
+    "title": "Déployer Home Assistant",
+    "description": "Un long parcours pour tout automatiser à la maison...",
+    "image": "/homeassistant.png",
+    "content": [
+      { "type": "heading", "text": "La Maison Intelligente Auto-Hébergée" },
+      { "type": "paragraph", "text": "Home Assistant est une plateforme de domotique open source qui place le contrôle local et la confidentialité au premier plan. Pendant plusieurs années, j'ai progressivement intégré des lumières, des capteurs, des caméras et des automatisations dans toute ma maison." }
+    ],
+    "footer": "À déterminer"
+  },
+  "thesis": {
+    "title": "Mon Mémoire de Master : L'IA Qui Vous Regarde Vous Entraîner",
+    "description": "Créer un système de reconnaissance d'exercices en temps réel à partir des caméras de sécurité existantes...",
+    "image": "/thesis-exemplar.jpg",
+    "content": [
+      { "type": "heading", "text": "Le Problème" },
+      { "type": "paragraph", "text": "Le marché mondial du fitness pèse plus de 120 milliards de dollars et croît de près de 10 % par an. Pourtant, pour la plupart des membres de salle de sport, l'expérience n'a pas changé depuis des décennies : mêmes équipements, mêmes routines, et aucun retour à moins de payer un coach personnel. Les coachs améliorent considérablement les résultats — moins de blessures, meilleure forme, progrès plus rapides — mais ils sont chers et ne peuvent pas s'occuper de chaque membre à chaque visite. Pendant ce temps, presque toutes les salles de sport disposent déjà d'un réseau de caméras de sécurité. Elles restent là, à enregistrer, utilisées seulement pour rejouer des incidents. Et si ces mêmes caméras pouvaient observer les membres s'entraîner et leur donner des retours utiles en temps réel ?" },
+      { "type": "heading", "text": "L'Approche" },
+      { "type": "paragraph", "text": "L'idée est simple : extraire les points clés du corps à partir de la vidéo en utilisant l'estimation de pose, classifier l'exercice selon la façon dont ces points évoluent dans le temps, et compter les répétitions. La réalité, bien sûr, était plus compliquée. Le pipeline enchaîne trois modèles. D'abord, MediaPipe (BlazePose de Google) extrait 33 points de repère corporels de chaque image — épaules, coudes, hanches, genoux, etc. À partir de ceux-ci, je calcule 14 angles articulaires qui décrivent la configuration du corps. Ensuite, un Réseau Convolutif Temporel (TCN) classifie l'exercice parmi 16 catégories en observant comment ces angles évoluent dans le temps. Enfin, un modèle appelé RepNet compte les répétitions en analysant l'auto-similarité périodique du mouvement. Le tout fonctionne à 10 images par seconde sur un ordinateur portable, bien dans les 100 millisecondes de budget de latence nécessaires pour une utilisation en temps réel." },
+      { "type": "paragraph", "text": "J'ai comparé cinq approches de classification : Arbres de Décision, SVM Linéaire, K-Nearest Neighbors, Histogram Gradient Boosting et un TCN personnalisé. Le TCN a gagné — 95,8 % de précision sur 16 catégories d'exercices — mais la vraie surprise était qu'un simple modèle de boosting par histogramme a atteint 95,3 %. La différence n'était pas la précision brute, mais la stabilité temporelle. Les modèles basés sur les arbres produisaient des prédictions instables qui basculaient entre les classes d'une image à l'autre. Les convolutions dilatées du TCN lui donnaient un champ réceptif couvrant plusieurs secondes de mouvement, produisant des sorties fluides et stables. Quand vous affichez des résultats à un utilisateur en temps réel, cette stabilité compte plus qu'une fraction de pourcent sur un ensemble de test." },
+      { "type": "heading", "text": "La Construction" },
+      { "type": "paragraph", "text": "Le projet est né de mon adhésion à Sana Health and Fitness à Bologne. Le propriétaire, Vincenzo Bassi, avait déjà investi dans la technologie connectée pour sa salle et voulait aller plus loin. Nous nous sommes rencontrés en octobre 2024 et avons défini un plan en deux phases : la Phase 1 se concentrerait sur l'identification des exercices et le comptage des répétitions, la Phase 2 sur l'évaluation de la forme et la correction posturale. Au cours des sept mois suivants, j'ai filmé 330 vidéos d'exercices à la salle — membres, coachs, moi-même — couvrant tout, des squats et soulevés de terre aux élévations latérales et fentes. Combiné avec un jeu de données public, le corpus d'entraînement a atteint près d'un demi-million d'images réparties sur 16 catégories d'exercices." },
+      { "type": "paragraph", "text": "Le système fonctionne sur les caméras de sécurité Hikvision existantes de la salle via des flux RTSP. Un backend FastAPI traite les images, un frontend React affiche les résultats, et le tout est conteneurisé avec Docker et déployable sur Google Cloud Run via Terraform. Les utilisateurs reçoivent un plan d'exercices personnalisé via une interface web, et chaque série détectée est enregistrée dans une base de données PostgreSQL. À la fin d'une séance, les membres peuvent voir exactement ce qu'ils ont fait : quels exercices, combien de répétitions, et quand." },
+      { "type": "heading", "text": "Ce Que J'ai Appris" },
+      { "type": "paragraph", "text": "La plus grande leçon : la qualité des données l'emporte sur la complexité du modèle. Nous avons passé des semaines à chercher des améliorations architecturales qui rapportaient des fractions de pourcent, alors que le nettoyage des extractions bruyantes d'angles articulaires et la correction d'un bug subtil de moyenne d'images nous ont donné un bond de 4 % du jour au lendemain. Une leçon liée : la précision hors ligne est un mauvais indicateur de la performance réelle. Le TCN a obtenu 95,8 % sur un ensemble de test isolé, mais en vidéo de salle continue — où le modèle doit détecter quand un exercice commence et se termine, pas seulement classifier des extraits pré-segmentés — le taux de détection est tombé à 72,8 %. Cet écart entre le laboratoire et le terrain est là où se trouve le vrai travail." },
+      { "type": "paragraph", "text": "La découverte la plus frappante est venue d'une expérience à deux caméras. J'ai enregistré la même séance simultanément sous deux angles : une vue en plongée de trois-quarts (placement typique des caméras de sécurité) et une vue frontale à niveau. Le taux de détection est passé de 70 % à 40 %. Même personne, même séance, mêmes modèles — juste un angle de caméra différent. Si vous construisez des systèmes de vision pour le monde réel, le placement de la caméra n'est pas un détail, c'est le facteur dominant." },
+      { "type": "paragraph", "text": "J'ai aussi appris que construire un produit est fondamentalement différent d'entraîner un modèle. Le pipeline d'inférence nécessitait trois threads avec des files d'attente bornées pour éviter les blocages. La boîte englobante de RepNet dérivait avec le temps et a dû être stabilisée. L'exécution sur le backend MPS d'un Mac était plus rapide que le CPU mais introduisait des différences numériques subtiles par rapport à CUDA. Le passthrough GPU de Docker s'est cassé d'une manière qui a pris trois jours à diagnostiquer. Rien de tout cela n'apparaît dans le tableau des résultats d'un article de recherche, mais cela détermine si un système fonctionne réellement." },
+      { "type": "paragraph", "text": "Le mémoire, le jeu de données et le code source sont tous disponibles publiquement. Le jeu de données — des séquences de points de repère de pose provenant de 330 vraies vidéos de salle de sport — est publié pour aider d'autres chercheurs à travailler sur ce problème. Si les détails vous intéressent, le mémoire complet est lié sur mon portfolio." }
+    ],
+    "footer": "11 mai 2026"
+  }
+}

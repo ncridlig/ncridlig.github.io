@@ -1,0 +1,48 @@
+{
+  "heroMessage": "AI Engineer",
+  "aboutHeading": "About Me",
+  "aboutMessage": "My name is Nicolas Ivan Cridlig. I graduated in March 2026 from the University of Bologna with a Master's degree in Artificial Intelligence, and in 2023 from UC San Diego with a Bachelor's in Electrical Engineering. One of my passions is to speak all the Romance Languages.",
+  "experiencesHeading": "Experiences",
+  "projectsHeading": "Recent Projects",
+  "skillsHeading": "Skills",
+  "blogHeading": "Blog",
+  "getInTouchHeading": "Get In Touch",
+  "getInTouchMessage": "I'm currently looking for full-time Artificial Intelligence opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+  "skills": [
+    { "name": "French", "value": "Native" },
+    { "name": "English", "value": "Native" },
+    { "name": "Italian", "value": "C1" },
+    { "name": "Coding", "value": "Python, C++" },
+    { "name": "Frameworks", "value": "ROS2" }
+  ],
+  "experiences": [
+    {
+      "role": "Driverless AI Division Manager at UniBo Motorsport",
+      "date": "September 2023 – September 2025"
+    },
+    {
+      "role": "Data Scientist at Scripps Machine Listening Lab",
+      "date": "June 2022 – August 2022"
+    },
+    {
+      "role": "IT Supervisor at Scripps Institute of Oceanography",
+      "date": "October 2019 – December 2022"
+    },
+    {
+      "role": "Marketing VP at Interfraternity Council",
+      "date": "December 2020 – December 2021"
+    },
+    {
+      "role": "Instructional Assistant at Jacobs School of Engineering",
+      "date": "January 2021 – April 2021"
+    },
+    {
+      "role": "Fiesta Island Camp Counselor at Boy Scouts of America",
+      "date": "July 2019 – August 2019"
+    },
+    {
+      "role": "Makers Club President at San Diego High School",
+      "date": "October 2017 – June 2019"
+    }
+  ]
+}

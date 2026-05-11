@@ -60,6 +60,18 @@ class BlogBuilder {
     return this;
   };
 
+  addLinkParagraph = (text, linkText, linkUrl) => {
+    this.list.push(
+      <p key={this.list.length} className="lead">
+        {text}{" "}
+        <a href={linkUrl} target="_blank" rel="noopener noreferrer">
+          {linkText}
+        </a>
+      </p>
+    );
+    return this;
+  };
+
   addVideo = (videoUrl) => {
     this.list.push(
       <div key={this.list.length} className="text-center">

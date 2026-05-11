@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import Container from "react-bootstrap/Container";
 import { Jumbotron } from "./migration";
 import Row from "react-bootstrap/Row";
@@ -14,10 +15,9 @@ const dummyProject = {
   pushed_at: null,
 };
 const API = "https://api.github.com";
-// const gitHubQuery = "/repos?sort=updated&direction=desc";
-// const specficQuerry = "https://api.github.com/repos/hashirshoaeb/";
 
-const Project = ({ heading, username, length, specfic }) => {
+const Project = ({ username, length, specfic }) => {
+  const { t } = useTranslation();
   const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
   const specficReposAPI = `${API}/repos/${username}`;
   const dummyProjectsArr = new Array(length + specfic.length).fill(
@@ -29,11 +29,8 @@ const Project = ({ heading, username, length, specfic }) => {
   const fetchRepos = useCallback(async () => {
     let repoList = [];
     try {
-      // getting all repos
       const response = await axios.get(allReposAPI);
-      // slicing to the length
       repoList = [...response.data.slice(0, length)];
-      // adding specified repos
       try {
         for (let repoName of specfic) {
           const response = await axios.get(`${specficReposAPI}/${repoName}`);
@@ -42,8 +39,6 @@ const Project = ({ heading, username, length, specfic }) => {
       } catch (error) {
         console.error(error.message);
       }
-      // setting projectArray
-      // TODO: remove the duplication.
       setProjectsArray(repoList);
     } catch (error) {
       console.error(error.message);
@@ -57,7 +52,7 @@ const Project = ({ heading, username, length, specfic }) => {
   return (
     <Jumbotron fluid id="projects" className="bg-light m-0">
       <Container className="">
-        <h2 className="display-4 pb-5 text-center">{heading}</h2>
+        <h2 className="display-4 pb-5 text-center">{t('home:projectsHeading')}</h2>
         <Row>
           {projectsArray.length
             ? projectsArray.map((project, index) => (

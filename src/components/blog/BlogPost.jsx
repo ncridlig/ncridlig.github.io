@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom"; // Import the useParams hook for react router v6 or later
-import bloglist from "../../editable-stuff/blog";
+import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
+import { createBlogPosts } from "../../editable-stuff/blog";
 
 const BlogPost = () => {
-  const { id } = useParams(); // Use useParams to get the id
-  const post = bloglist[id]; // Get the post using the ID
+  const { t } = useTranslation();
+  const { id } = useParams();
+  const bloglist = createBlogPosts(t);
+  const post = bloglist[id];
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -19,7 +22,7 @@ const BlogPost = () => {
           {post.getBlog()}
         </div>
       )}
-      {!post && <h1 className="display-1 text-center">404 - Page not found</h1>}
+      {!post && <h1 className="display-1 text-center">{t('common:blog.notFound')}</h1>}
     </div>
   );
 };

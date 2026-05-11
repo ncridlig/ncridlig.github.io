@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "cvEn": "CV (EN)",
+    "cvFr": "CV (FR)",
+    "aboutMe": "About Me",
+    "experiences": "Experiences",
+    "projects": "Projects",
+    "skills": "Skills",
+    "blog": "Blog"
+  },
+  "hero": {
+    "moreAboutMe": "More about me",
+    "learnMoreAria": "Learn more about me"
+  },
+  "about": {
+    "curriculumVitae": "Curriculum Vitae",
+    "cvFrancais": "CV Français",
+    "resumeAria": "Resume/CV",
+    "cvFrancaisAria": "CV Français"
+  },
+  "project": {
+    "cloneProject": "Clone Project",
+    "repo": "Repo",
+    "languages": "Languages:",
+    "codeNotDeployed": "code yet to be deployed.",
+    "stars": "Stars",
+    "updated": "Updated",
+    "justNow": "just now",
+    "hourAgo": "hour ago",
+    "hoursAgo": "hours ago",
+    "on": "on"
+  },
+  "blog": {
+    "heading": "Blog",
+    "readMore": "Read more...",
+    "notFound": "404 - Page not found",
+    "writtenOn": "Written on:"
+  },
+  "footer": {
+    "with": "with",
+    "by": "by",
+    "using": "using",
+    "openSource": "Project code is open source. Feel free to fork and make your own version.",
+    "myGithub": "My GitHub"
+  }
+}

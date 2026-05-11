@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 import ExperienceCard from "./ExperienceCard";
 import { Jumbotron } from './migration';
 import {
@@ -6,17 +7,20 @@ import {
   Row,
 } from "react-bootstrap";
 
-const Experience = ({ experiences }) => {
+const Experience = () => {
+  const { t } = useTranslation();
+  const experiences = t('home:experiences', { returnObjects: true });
+
   return (
     <section id="experiences" className="section">
       <Container>
         <Jumbotron className="bg-white">
           <h2 className="display-4 mb-5 text-center">
-            {experiences.heading}
+            {t('home:experiencesHeading')}
           </h2>
           <Row>
             {
-              experiences.data.map((data, index) => {
+              experiences.map((data, index) => {
                 return <ExperienceCard key={index} data={data} />
               })
             }

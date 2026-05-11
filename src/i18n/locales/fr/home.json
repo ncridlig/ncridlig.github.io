@@ -1,0 +1,48 @@
+{
+  "heroMessage": "Ingénieur IA",
+  "aboutHeading": "À Propos",
+  "aboutMessage": "Je m'appelle Nicolas Ivan Cridlig. J'ai obtenu mon Master en Intelligence Artificielle en mars 2026 à l'Université de Bologne, et ma Licence en Génie Électrique en 2023 à UC San Diego. L'une de mes passions est de parler toutes les langues romanes.",
+  "experiencesHeading": "Expériences",
+  "projectsHeading": "Projets Récents",
+  "skillsHeading": "Compétences",
+  "blogHeading": "Blog",
+  "getInTouchHeading": "Me Contacter",
+  "getInTouchMessage": "Je suis actuellement à la recherche d'opportunités en Intelligence Artificielle ! Si vous connaissez des postes disponibles, si vous avez des questions, ou si vous voulez simplement me dire bonjour, n'hésitez pas à m'envoyer un email à",
+  "skills": [
+    { "name": "Français", "value": "Langue maternelle" },
+    { "name": "Anglais", "value": "Langue maternelle" },
+    { "name": "Italien", "value": "C1" },
+    { "name": "Programmation", "value": "Python, C++" },
+    { "name": "Frameworks", "value": "ROS2" }
+  ],
+  "experiences": [
+    {
+      "role": "Responsable Division IA Sans Conducteur — UniBo Motorsport",
+      "date": "Septembre 2023 – Septembre 2025"
+    },
+    {
+      "role": "Data Scientist — Scripps Machine Listening Lab",
+      "date": "Juin 2022 – Août 2022"
+    },
+    {
+      "role": "Superviseur IT — Scripps Institute of Oceanography",
+      "date": "Octobre 2019 – Décembre 2022"
+    },
+    {
+      "role": "VP Marketing — Interfraternity Council",
+      "date": "Décembre 2020 – Décembre 2021"
+    },
+    {
+      "role": "Assistant Pédagogique — Jacobs School of Engineering",
+      "date": "Janvier 2021 – Avril 2021"
+    },
+    {
+      "role": "Animateur — Camp Fiesta Island, Boy Scouts of America",
+      "date": "Juillet 2019 – Août 2019"
+    },
+    {
+      "role": "Président du Makers Club — San Diego High School",
+      "date": "Octobre 2017 – Juin 2019"
+    }
+  ]
+}

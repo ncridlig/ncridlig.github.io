@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useScrollPosition } from "../hooks/useScrollPosition";
 import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,12 +8,13 @@ import { mainBody, repos, about, skills, blog } from "../editable-stuff/config.j
 import { NavLink } from "./home/migration";
 
 const Navigation = React.forwardRef((props, ref) => {
+  const { t, i18n } = useTranslation();
   const [isTop, setIsTop] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
   const navbarMenuRef = React.useRef();
   const navbarDimensions = useResizeObserver(navbarMenuRef);
   const navBottom = navbarDimensions ? navbarDimensions.bottom : 0;
-  
+
   useScrollPosition(
     ({ prevPos, currPos }) => {
       if (!navbarDimensions || !ref.current) return;
@@ -30,6 +32,10 @@ const Navigation = React.forwardRef((props, ref) => {
       ? setIsTop(false)
       : setIsTop(true);
   }, [navBottom, navbarDimensions, ref, scrollPosition]);
+
+  const toggleLang = () => {
+    i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr");
+  };
 
   return (
     <Navbar
@@ -49,7 +55,7 @@ const Navigation = React.forwardRef((props, ref) => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            CV (EN)
+            {t('common:nav.cvEn')}
           </NavLink>
           <NavLink
             className="nav-item lead"
@@ -57,14 +63,14 @@ const Navigation = React.forwardRef((props, ref) => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            CV (FR)
+            {t('common:nav.cvFr')}
           </NavLink>
           {about.show && (
             <NavLink
               className="nav-item lead"
               href={process.env.PUBLIC_URL + "/#aboutme"}
             >
-              About Me
+              {t('common:nav.aboutMe')}
             </NavLink>
           )}
           {repos.show && (
@@ -72,14 +78,14 @@ const Navigation = React.forwardRef((props, ref) => {
               className="nav-item lead"
               href={process.env.PUBLIC_URL + "/#experiences"}
             >
-              Experiences
+              {t('common:nav.experiences')}
             </NavLink>
           )}
           {repos.show && (
             <NavLink
               href={process.env.PUBLIC_URL + "/#projects"}
             >
-              Projects
+              {t('common:nav.projects')}
             </NavLink>
           )}
           {skills.show && (
@@ -87,7 +93,7 @@ const Navigation = React.forwardRef((props, ref) => {
               className="nav-item lead"
               href={process.env.PUBLIC_URL + "/#skills"}
             >
-              Skills
+              {t('common:nav.skills')}
             </NavLink>
           )}
           {blog.show && (
@@ -95,9 +101,14 @@ const Navigation = React.forwardRef((props, ref) => {
               className="nav-item lead"
               href={process.env.PUBLIC_URL + "/#blog"}
             >
-              Blog
+              {t('common:nav.blog')}
             </NavLink>
           )}
+          <Nav.Link className="nav-item" onClick={toggleLang} style={{ cursor: "pointer" }}>
+            <span className="badge bg-secondary">
+              {i18n.language === "fr" ? "EN" : "FR"}
+            </span>
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

@@ -1,11 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { BlogBuilder } from "./BlogBuilder";
-import bloglist from "../../editable-stuff/blog";
+import { createBlogPosts } from "../../editable-stuff/blog";
 import { Link } from "react-router-dom";
+
 const Blog = (props) => {
+  const { t } = useTranslation();
+  const bloglist = createBlogPosts(t);
+
   return (
     <div id="blog" className="container-lg mt-5 bg-blue">
-      <h2 className="display-4 pb-5 text-center">Blog</h2>
+      <h2 className="display-4 pb-5 text-center">{t('common:blog.heading')}</h2>
       {bloglist.map((value, index) => {
         return (
           <BlogCard
@@ -22,6 +27,8 @@ const Blog = (props) => {
 };
 
 const BlogCard = ({ index, title, image, description }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="m-5">
       <div className="">
@@ -34,7 +41,7 @@ const BlogCard = ({ index, title, image, description }) => {
               <h1 className="">{title}</h1>
               <p className="lead">{description}</p>
               <Link to={`${process.env.PUBLIC_URL}/blog/${index}`}>
-                Read more...{" "}
+                {t('common:blog.readMore')}{" "}
               </Link>
             </div>
           </div>

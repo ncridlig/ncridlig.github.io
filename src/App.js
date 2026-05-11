@@ -9,7 +9,7 @@ import {
   skills,
   getInTouch,
   experiences,
-  blog
+  blog,
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
@@ -17,7 +17,7 @@ import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
-import { Blog } from "./components/blog/Blog"; // since Blog has two exports
+import { Blog } from "./components/blog/Blog";
 import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
@@ -30,28 +30,22 @@ const Home = React.forwardRef((props, ref) => {
       <MainBody
         gradient={mainBody.gradientColors}
         title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
-        message={mainBody.message}
         icons={mainBody.icons}
         ref={ref}
       />
       {about.show && (
         <AboutMe
-          heading={about.heading}
-          message={about.message}
           link={about.imageLink}
           imgSize={about.imageSize}
           resume={about.resume}
           resumeFr={about.resumeFr}
         />
       )}
-      {
-        experiences.show && (
-          <Experience experiences={experiences}/>
-        )
-      }
+      {experiences.show && (
+        <Experience />
+      )}
       {repos.show && (
         <Project
-          heading={repos.heading}
           username={repos.gitHubUsername}
           length={repos.reposLength}
           specfic={repos.specificRepos}
@@ -59,24 +53,15 @@ const Home = React.forwardRef((props, ref) => {
       )}
       {leadership.show && (
         <Leadership
-          heading={leadership.heading}
-          message={leadership.message}
           img={leadership.images}
           imageSize={leadership.imageSize}
         />
       )}
       {skills.show && (
-        <Skills
-          heading={skills.heading}
-          hardSkills={skills.hardSkills}
-          softSkills={skills.softSkills}
-        />
+        <Skills />
       )}
       {blog.show && (
-        <Blog
-          heading={blog.heading}
-          blogList={blog.blogList}
-          />
+        <Blog />
       )}
     </>
   );
@@ -95,11 +80,7 @@ const App = () => {
       </Routes>
       <Footer>
         {getInTouch.show && (
-          <GetInTouch
-            heading={getInTouch.heading}
-            message={getInTouch.message}
-            email={getInTouch.email}
-          />
+          <GetInTouch email={getInTouch.email} />
         )}
       </Footer>
     </BrowserRouter>
