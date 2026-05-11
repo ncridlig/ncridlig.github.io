@@ -49,7 +49,7 @@ const Navigation = React.forwardRef((props, ref) => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            CV
+            CV (EN)
           </NavLink>
           <NavLink
             className="nav-item lead"
