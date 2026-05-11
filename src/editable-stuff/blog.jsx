@@ -1,7 +1,7 @@
 import { BlogBuilder } from "../components/blog/BlogBuilder";
 const bloglist = [];
 
-const blog = new BlogBuilder({
+const sacmiPost = new BlogBuilder({
   title: "Tour of SACMI",
   image: "/sacmi.png",
   description:
@@ -20,7 +20,7 @@ const blog = new BlogBuilder({
   .addVideo("https://www.youtube.com/embed/9pB7XvaKaRM?si=kkqhAbYfsjqrXvJI")
   .addFooter("October 14, 2024");
 
-const blog1 = new BlogBuilder({
+const roscarPost = new BlogBuilder({
   title: "Open CV Autonomous Vehicle",
   image: "/roscar.png",
   description:
@@ -42,16 +42,16 @@ const blog1 = new BlogBuilder({
         2020FallTeam5
       </a>
     </>
-  )  
+  )
   .addVideo("https://www.youtube.com/embed/2VcuRZCTn6M?si=tLe8Bsdi5IWWOz1h")
   .addFooter("October 15, 2024");
 
-  const blog2 = new BlogBuilder({
-    title: "FPV Drone Pilot",
-    image: "/drone.png",
-    description:
-      "Some people build computers. I build acrobatic flying machines..."
-  })
+const dronePost = new BlogBuilder({
+  title: "FPV Drone Pilot",
+  image: "/drone.png",
+  description:
+    "Some people build computers. I build acrobatic flying machines...",
+})
   .addHeading("FPV = First Person View")
   .addParagraph(
     "Radio controlled aircraft are my longest running hobby. My mother has experience flying small aircraft, and my father likes tinkering. Starting from 11 years old when I was offered a radio controlled car, the Losi Mini-T, I started wishing to take it to the third dimension. As a freshman in high school, I saved enough to buy the parts for a QAV210 drone from a Chinese seller. They arrived a month later, and I built the drone by following guides on YouTube. I self-taught myself how to solder, use a multimeter, and troubleshoot. It was addictive. I searched for friends in the hobby but I was too young to drive and often had no choice but to fly by myself at the park. I would fly, crash, rebuild... for months! Eventually I got the hang of flying line of sight and invested in FPV goggles. These use a camera on the front of the drone to provide a low latency cockpit view. They are very immersive. Over time, I got better at building drones. They had more range, more flight time, and better cameras."
@@ -62,39 +62,76 @@ const blog1 = new BlogBuilder({
   .addVideo("https://www.youtube.com/embed/ulzixaiELEM?si=qhR_orQfUxvyr7_u")
   .addFooter("October 15, 2024");
 
-  const blog3 = new BlogBuilder({
-    title: "Building an Othello Player",
-    image: "/drone.png",
-    description:
-      "Stretching my CNNs..."
-  })
-  .addHeading("Is a board an image?")
+const othelloPost = new BlogBuilder({
+  title: "Building an Othello Player",
+  image: "/othello.png",
+  description:
+    "Stretching my CNNs to play a classic board game...",
+})
+  .addHeading("Is a Board an Image?")
   .addParagraph(
-    "A unique use case for Convolutional Neural Networks..."
+    "A unique use case for Convolutional Neural Networks is representing game boards as images and training a model to evaluate positions."
   )
-  .addVideo("https://youtu.be/4uyaCkAwKLU?si=NeWwT9pevr9odWtG")
-  .addVideo("https://youtu.be/_9cp5MPo1r4?si=_J6iBY0Xf8V-vtzl")
-  .addFooter("October 15, 2024");
+  .addFooter("TBD");
 
-  const blog4 = new BlogBuilder({
-    title: "Deploying Home Assistant",
-    image: "/drone.png",
-    description:
-      "Years long process..."
-  })
-  .addHeading("Is a board an image?")
+const homeAssistantPost = new BlogBuilder({
+  title: "Deploying Home Assistant",
+  image: "/homeassistant.png",
+  description:
+    "A years-long journey to automate everything at home...",
+})
+  .addHeading("The Self-Hosted Smart Home")
   .addParagraph(
-    "A unique use case for Convolutional Neural Networks..."
+    "Home Assistant is an open-source home automation platform that puts local control and privacy first. Over several years, I gradually integrated lights, sensors, cameras, and automations throughout my home."
   )
-  .addVideo("https://youtu.be/4uyaCkAwKLU?si=NeWwT9pevr9odWtG")
-  .addVideo("https://youtu.be/_9cp5MPo1r4?si=_J6iBY0Xf8V-vtzl")
-  .addFooter("October 15, 2024");
+  .addFooter("TBD");
 
-// bloglist.push(blog4);
-// bloglist.push(blog3);
+const thesisPost = new BlogBuilder({
+  title: "My Master's Thesis: AI That Watches You Work Out",
+  image: "/thesis-exemplar.jpg",
+  description:
+    "Building a real-time exercise recognition system from existing gym security cameras...",
+})
+  .addHeading("The Problem")
+  .addParagraph(
+    "The global fitness market is worth over 120 billion dollars and growing at nearly 10% per year. Yet for most gym members, the experience hasn't changed in decades: same equipment, same routines, and no feedback unless you pay for a personal trainer. Trainers improve outcomes dramatically — fewer injuries, better form, faster progress — but they're expensive and can't scale to every member on every visit. Meanwhile, nearly every gym already operates a network of security cameras. They sit there, recording, used only to replay incidents. What if those same cameras could watch members exercise and give them useful feedback in real time?"
+  )
+  .addHeading("The Approach")
+  .addParagraph(
+    "The idea is simple: extract body keypoints from video using pose estimation, classify the exercise from how those keypoints move over time, and count the repetitions. The reality, of course, was more complicated. The pipeline chains three models. First, MediaPipe (Google's BlazePose) extracts 33 body landmarks from each frame — shoulders, elbows, hips, knees, and so on. From these, I compute 14 joint angles that describe the body configuration. Second, a Temporal Convolutional Network classifies the exercise across 16 categories by looking at how those angles evolve through time. Third, a model called RepNet counts repetitions by analyzing the periodic self-similarity in the movement. The whole thing runs at 10 frames per second on a laptop, well within the 100 millisecond latency budget needed for real-time use."
+  )
+  .addParagraph(
+    "I compared five classification approaches: Decision Trees, Linear SVM, K-Nearest Neighbors, Histogram Gradient Boosting, and a custom TCN. The TCN won — 95.8% accuracy across 16 exercise categories — but the real surprise was that a simple histogram boosting baseline hit 95.3%. The difference wasn't raw accuracy, it was temporal stability. Tree-based models produced jittery predictions that flipped between classes frame to frame. The TCN's dilated convolutions gave it a receptive field spanning several seconds of movement, producing smooth, stable outputs. When you're displaying results to a user in real time, that stability matters more than a fraction of a percent on a test set."
+  )
+  .addHeading("Building It")
+  .addParagraph(
+    "The project grew out of my membership at Sana Health and Fitness in Bologna. The owner, Vincenzo Bassi, had already invested in connected gym technology and wanted to go further. We met in October 2024 and defined a two-phase plan: Phase 1 would focus on exercise identification and repetition counting, Phase 2 on form assessment and posture correction. Over the next seven months, I filmed 330 exercise videos at the gym — members, trainers, myself — covering everything from squats and deadlifts to lateral raises and lunges. Combined with a public dataset, the training corpus reached nearly half a million frames across 16 exercise categories."
+  )
+  .addParagraph(
+    "The system runs on the gym's existing Hikvision security cameras via RTSP streams. A FastAPI backend processes frames, a React frontend displays results, and everything is containerized with Docker and deployable to Google Cloud Run via Terraform. Users get a personal exercise plan through a web interface, and every detected set is logged to a PostgreSQL database. At the end of a session, members can see exactly what they did: which exercises, how many reps, and when."
+  )
+  .addHeading("What I Learned")
+  .addParagraph(
+    "The biggest lesson: data quality outweighs model complexity. We spent weeks chasing architectural improvements that yielded fractions of a percent, while cleaning up noisy joint angle extractions and fixing a subtle frame-averaging bug gave us a 4% jump overnight. A related lesson: offline accuracy is a poor proxy for real-world performance. The TCN scored 95.8% on a held-out test set, but in continuous gym video — where the model has to detect when an exercise starts and ends, not just classify pre-segmented clips — detection rate dropped to 72.8%. That gap between the lab and the gym floor is where the real work lives."
+  )
+  .addParagraph(
+    "The most dramatic finding came from a dual-camera experiment. I recorded the same workout simultaneously from two angles: an elevated three-quarter view (typical security camera placement) and a level frontal view. Detection rate dropped from 70% to 40%. Same person, same workout, same models — just a different camera angle. If you're building vision systems for the real world, camera placement isn't a detail, it's the dominant factor."
+  )
+  .addParagraph(
+    "I also learned that building a product is fundamentally different from training a model. The inference pipeline needed three threads with bounded queues to avoid blocking. RepNet's bounding box drifted over time and had to be stabilized. Running on a Mac's MPS backend was faster than CPU but introduced subtle numerical differences from CUDA. Docker's GPU passthrough broke in a way that took three days to diagnose. None of these appear in a research paper's results table, but they determine whether a system actually works."
+  )
+  .addParagraph(
+    "The thesis, dataset, and source code are all publicly available. The dataset — pose landmark sequences from 330 real gym videos — is released to help other researchers work on this problem. If you're interested in the details, the full thesis is linked on my portfolio."
+  )
+  .addFooter("May 11, 2026");
 
-bloglist.push(blog2);
-bloglist.push(blog1);
-bloglist.push(blog);
+// Drafts — uncomment when ready:
+// bloglist.push(homeAssistantPost);
+// bloglist.push(othelloPost);
+
+bloglist.push(thesisPost);
+bloglist.push(dronePost);
+bloglist.push(roscarPost);
+bloglist.push(sacmiPost);
 
 export default bloglist;
