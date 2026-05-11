@@ -9,7 +9,7 @@ const mainBody = {
   firstName: "Nicolas",
   middleName: "Ivan",
   lastName: "Cridlig",
-  message: " Student in Artificial Intelligence ",
+  message: " AI Engineer ",
   icons: [
     {
       image: "fa-github",
@@ -46,7 +46,7 @@ const about = {
   imageLink: require("../editable-stuff/nicolascridlig.png"),
   imageSize: 375,
   message:
-    "My name is Nicolas Ivan Cridlig. I will be a graduate in 2025 from University of Bologna in Italy with a masters degree in Artificial Intelligence. One of my passions is to speak all the Romance Languages.",
+    "My name is Nicolas Ivan Cridlig. I graduated in March 2026 from the University of Bologna with a Master's degree in Artificial Intelligence, and in 2023 from UC San Diego with a Bachelor's in Electrical Engineering. One of my passions is to speak all the Romance Languages.",
   resume: process.env.PUBLIC_URL + "/nicolascridligcv.pdf",
   resumeFr: process.env.PUBLIC_URL + "/nicolascridligcv-fr.pdf",
 };
@@ -95,7 +95,7 @@ const skills = {
   hardSkills: [
     { name: "French", value: 'Native' },
     { name: "English", value: 'Native' },
-    { name: "Italian", value: 'B1' },
+    { name: "Italian", value: 'C1' },
     { name: "Coding", value: "Python, C++" },
     { name: "Frameworks", value: "ROS2" },
   ],
