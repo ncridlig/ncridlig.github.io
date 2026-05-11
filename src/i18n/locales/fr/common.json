@@ -1,8 +1,6 @@
 {
   "nav": {
-    "cvEn": "CV (EN)",
-    "cvFr": "CV (FR)",
-    "aboutMe": "À Propos",
+    "cv": "CV",
     "experiences": "Expériences",
     "projects": "Projets",
     "skills": "Compétences",
@@ -34,7 +32,10 @@
     "heading": "Blog",
     "readMore": "Lire la suite...",
     "notFound": "404 - Page introuvable",
-    "writtenOn": "Écrit le :"
+    "writtenOn": "Écrit le :",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "allPosts": "Tous les articles"
   },
   "footer": {
     "with": "avec",

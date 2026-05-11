@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-// import { useScrollPosition } from "../../hooks/useScrollPosition";
 
 class BlogBuilder {
   list = [];
@@ -12,26 +11,18 @@ class BlogBuilder {
 
   addImage = (imageSrc) => {
     this.list.push(
-      <div key={this.list.length} style={{ textAlign: "center" }}>
+      <div key={this.list.length} className="text-center my-4">
         <img
           src={imageSrc}
           alt="Blog"
-          style={{
-            maxWidth: "100%",
-            border: "4px solid lightblue", /* Blue border */
-            borderRadius: "10px", /* Rounded corners */
-            padding: "10px", /* Space between image and border */
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", /* Soft shadow */
-            display: "block",
-            marginLeft: "auto",
-            marginRight: "auto", /* Center align the image */
-          }}
+          className="img-fluid rounded border border-info border-3 p-2 shadow-sm"
+          style={{ maxWidth: "720px" }}
         />
       </div>
     );
     return this;
   };
-  
+
   addParagraph = (props) => {
     this.list.push(
       <p key={this.list.length} className="lead">
@@ -74,10 +65,8 @@ class BlogBuilder {
 
   addVideo = (videoUrl) => {
     this.list.push(
-      <div key={this.list.length} className="text-center">
+      <div key={this.list.length} className="ratio ratio-16x9 my-4" style={{ maxWidth: "720px", marginLeft: "auto", marginRight: "auto" }}>
         <iframe
-          width="560"
-          height="315"
           src={videoUrl}
           title="YouTube video player"
           frameBorder="0"

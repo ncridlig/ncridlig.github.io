@@ -4,7 +4,7 @@ import { useScrollPosition } from "../hooks/useScrollPosition";
 import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { mainBody, repos, about, skills, blog } from "../editable-stuff/config.js";
+import { mainBody, about, repos, skills, blog } from "../editable-stuff/config.js";
 import { NavLink } from "./home/migration";
 
 const Navigation = React.forwardRef((props, ref) => {
@@ -49,28 +49,12 @@ const Navigation = React.forwardRef((props, ref) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="navbar-nav mr-auto">
-          <NavLink
-            className="nav-item lead"
-            href={about.resume}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            {t('common:nav.cvEn')}
-          </NavLink>
-          <NavLink
-            className="nav-item lead"
-            href={about.resumeFr}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            {t('common:nav.cvFr')}
-          </NavLink>
           {about.show && (
             <NavLink
               className="nav-item lead"
               href={process.env.PUBLIC_URL + "/#aboutme"}
             >
-              {t('common:nav.aboutMe')}
+              {t('common:nav.cv')}
             </NavLink>
           )}
           {repos.show && (
