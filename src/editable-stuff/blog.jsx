@@ -1,6 +1,6 @@
 import { BlogBuilder } from "../components/blog/BlogBuilder";
 
-const POST_KEYS = ["thesis", "f1tenth", "drone", "roscar", "sacmi"];
+const POST_KEYS = ["polly", "thesis", "f1tenth", "homeAssistant", "drone", "roscar", "sacmi"];
 
 let _idCounter = 0;
 const nextId = () => ++_idCounter;
