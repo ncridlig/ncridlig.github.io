@@ -30,6 +30,8 @@ const Home = React.forwardRef((props, ref) => {
         gradient={mainBody.gradientColors}
         title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
         icons={mainBody.icons}
+        profilePic={about.imageLink}
+        imgSize={about.imageSize}
         resume={about.resume}
         resumeFr={about.resumeFr}
         ref={ref}

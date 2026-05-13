@@ -5,7 +5,7 @@ import Typist from 'react-typist-component';
 import { Jumbotron } from "./migration";
 
 const MainBody = React.forwardRef(
-  ({ gradient, title, resume, resumeFr, icons }, ref) => {
+  ({ gradient, title, profilePic, imgSize, resume, resumeFr, icons }, ref) => {
     const { t, i18n } = useTranslation();
 
     return (
@@ -40,6 +40,17 @@ const MainBody = React.forwardRef(
                 <i className={`fab ${icon.image}  fa-3x socialicons`} />
               </a>
             ))}
+          </div>
+          <div className="row justify-content-center mb-4">
+            <div className="col-auto">
+              <img
+                className="border border-secondary rounded-circle"
+                src={profilePic}
+                alt="Nicolas Cridlig"
+                width={imgSize}
+                height={imgSize}
+              />
+            </div>
           </div>
           <div className="row justify-content-center">
             <div className="col-lg-8">
