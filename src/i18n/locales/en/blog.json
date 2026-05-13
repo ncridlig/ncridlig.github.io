@@ -27,6 +27,27 @@
     ],
     "footer": "October 15, 2024"
   },
+  "f1tenth": {
+    "title": "Winning F1Tenth: My Year as AI Manager for UniBo Motorsport",
+    "description": "Leading a team of AI engineers to a world championship in autonomous racing...",
+    "image": "/ubm.jpg",
+    "content": [
+      { "type": "heading", "text": "UniBo Motorsport" },
+      { "type": "paragraph", "text": "UniBo Motorsport is the official racing team of the University of Bologna. Since 2009, over 250 students from different faculties have come together to design, build, and race prototypes in Formula SAE and MotoStudent competitions. The team runs three vehicles: Genesi (a hybrid formula car), Athena (an electric formula car), and Nemesi (an electric motorcycle). In 2023, the team added a fourth category: driverless autonomous racing. I joined as the AI Division Manager for the 2024-25 academic year, leading the F1Tenth project — a 1:10 scale autonomous racecar that competes in head-to-head races using only onboard sensors and computing." },
+      { "type": "linkParagraph", "text": "Learn more about the team at the official website:", "linkText": "motorsport.unibo.it", "linkUrl": "https://motorsport.unibo.it" },
+      { "type": "heading", "text": "The F1Tenth Stack" },
+      { "type": "paragraph", "text": "F1Tenth is an international competition where universities race 1:10 scale cars fully autonomously — no remote control, no human intervention. Our car, built on a Traxxas chassis with an NVIDIA Jetson onboard computer, perceives the world through a Hokuyo LiDAR and a ZED stereo camera. The software, all open source, runs on ROS2 and includes a custom particle filter for localization using CDDT raycasting, an adaptive extended Kalman filter fusing LiDAR, IMU, and wheel odometry, and multiple control algorithms — from pure pursuit and Stanley controllers to Gaussian potential fields and Frenet-frame lattice planners for overtaking. My division's focus was on the perception and planning pipeline: obstacle detection using adaptive breakpoint segmentation, neural network-based trajectory prediction for overtaking, and the integration of YOLO-based opponent detection via TensorRT on the Jetson." },
+      { "type": "heading", "text": "Milan — December 2024" },
+      { "type": "paragraph", "text": "Our first competition of the season was the F1Tenth International Race in Milan. The software stack performed well — localization was solid, the planner was generating clean trajectories, and obstacle detection was working as designed. But racing exposes what simulation doesn't, and what it exposed was tires. Our car struggled for grip on the polished indoor track surface. Other teams with softer compound tires carried more speed through corners. We adapted as best we could, tuning our speed profiles on the fly, and finished in 3rd place. It stung not to win, but the takeaway was clear: the algorithms were race-ready, we just needed better rubber." },
+      { "type": "heading", "text": "Atlanta — May 2025" },
+      { "type": "paragraph", "text": "Six months later, with upgraded tires and a refined software stack, we traveled to Atlanta for the 24th Roboracer Autonomous Competition. Everything clicked. The car held its line through high-speed sweepers, the overtaking planner found gaps that the Milan version would have missed, and the localization stayed locked even through the fast chicanes. We took 1st place and the $3,000 grand prize. Standing on that podium with teammates who had poured hundreds of hours into this project was the highlight of my university career." },
+      { "type": "image", "url": "/f1tenth_prize.jpg" },
+      { "type": "heading", "text": "What I Learned" },
+      { "type": "paragraph", "text": "Managing an AI division inside a 250-person racing team taught me lessons no classroom could. First: integration eats innovation for breakfast. A brilliant algorithm that doesn't integrate with the rest of the stack is worth zero. Second: the sim-to-real gap is real and it's brutal. Our overtaking models, trained on thousands of simulator laps with human and algorithmic demonstrations, behaved differently on the physical car — latency, sensor noise, and tire dynamics aren't modeled perfectly. Third: the best technical decision is sometimes about tires, not code. After Milan, we could have spent months tweaking planning parameters. Instead, we changed tires and won. Knowing when to stop optimizing software and fix the hardware is a skill I didn't expect to develop, but it's one I'll carry forward." },
+      { "type": "paragraph", "text": "All of our code is open source on GitHub under the ubm-driverless organization. If you're interested in autonomous racing, robotics, or just want to see how a student team builds a self-driving racecar from scratch, check out the repositories." }
+    ],
+    "footer": "June 13, 2025"
+  },
   "drone": {
     "title": "FPV Drone Pilot",
     "description": "Some people build computers. I build acrobatic flying machines...",
