@@ -5,7 +5,7 @@ import Typist from 'react-typist-component';
 import { Jumbotron } from "./migration";
 
 const MainBody = React.forwardRef(
-  ({ gradient, title, icons }, ref) => {
+  ({ gradient, title, resume, resumeFr, icons }, ref) => {
     const { t, i18n } = useTranslation();
 
     return (
@@ -41,14 +41,39 @@ const MainBody = React.forwardRef(
               </a>
             ))}
           </div>
-          <a
-            className="btn btn-outline-light btn-lg "
-            href="#aboutme"
-            role="button"
-            aria-label={t('common:hero.learnMoreAria')}
-          >
-            {t('common:hero.moreAboutMe')}
-          </a>
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <p className="lead mb-4" style={{ fontSize: '1.1rem', lineHeight: '1.7' }}>
+                {t('home:aboutMessage')}
+              </p>
+            </div>
+          </div>
+          {resume && (
+            <div>
+              <a
+                className="btn btn-outline-light btn-lg me-2 mb-2"
+                href={resume}
+                target="_blank"
+                rel="noreferrer noopener"
+                role="button"
+                aria-label={t('common:about.resumeAria')}
+              >
+                {t('common:about.curriculumVitae')}
+              </a>
+              {resumeFr && (
+                <a
+                  className="btn btn-outline-light btn-lg mb-2"
+                  href={resumeFr}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  role="button"
+                  aria-label={t('common:about.cvFrancaisAria')}
+                >
+                  {t('common:about.cvFrancais')}
+                </a>
+              )}
+            </div>
+          )}
         </Container>
       </Jumbotron>
     );
