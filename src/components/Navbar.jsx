@@ -11,6 +11,7 @@ const Navigation = React.forwardRef((props, ref) => {
   const { t, i18n } = useTranslation();
   const [isTop, setIsTop] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [expanded, setExpanded] = useState(false);
   const navbarMenuRef = React.useRef();
   const navbarDimensions = useResizeObserver(navbarMenuRef);
   const navBottom = navbarDimensions ? navbarDimensions.bottom : 0;
@@ -37,13 +38,17 @@ const Navigation = React.forwardRef((props, ref) => {
     i18n.changeLanguage(i18n.language === "fr" ? "en" : "fr");
   };
 
+  const closeMenu = () => setExpanded(false);
+
   return (
     <Navbar
       ref={navbarMenuRef}
+      expanded={expanded}
+      onToggle={setExpanded}
       className={`px-3 fixed-top  ${!isTop ? "navbar-white" : "navbar-transparent"}`}
       expand="lg"
     >
-      <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>
+      <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"} onClick={closeMenu}>
         {`- ${mainBody.lastName} -`}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
@@ -53,6 +58,7 @@ const Navigation = React.forwardRef((props, ref) => {
             <NavLink
               className="nav-item lead"
               href={process.env.PUBLIC_URL + "/#experiences"}
+              onClick={closeMenu}
             >
               {t('common:nav.experiences')}
             </NavLink>
@@ -60,6 +66,7 @@ const Navigation = React.forwardRef((props, ref) => {
           {repos.show && (
             <NavLink
               href={process.env.PUBLIC_URL + "/#projects"}
+              onClick={closeMenu}
             >
               {t('common:nav.projects')}
             </NavLink>
@@ -68,6 +75,7 @@ const Navigation = React.forwardRef((props, ref) => {
             <NavLink
               className="nav-item lead"
               href={process.env.PUBLIC_URL + "/#skills"}
+              onClick={closeMenu}
             >
               {t('common:nav.skills')}
             </NavLink>
@@ -76,6 +84,7 @@ const Navigation = React.forwardRef((props, ref) => {
             <NavLink
               className="nav-item lead"
               href={process.env.PUBLIC_URL + "/#blog"}
+              onClick={closeMenu}
             >
               {t('common:nav.blog')}
             </NavLink>
