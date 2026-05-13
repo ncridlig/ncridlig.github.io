@@ -42,20 +42,20 @@ const MainBody = React.forwardRef(
             ))}
           </div>
           <div className="row justify-content-center align-items-center">
-            <div className="col-md-4 text-center mb-4 mb-md-0">
+            <div className="col-md-5 text-center mb-4 mb-md-0">
               <img
                 className="border border-secondary rounded-circle img-fluid"
                 src={profilePic}
                 alt="Nicolas Cridlig"
-                style={{ maxWidth: imgSize, height: 'auto' }}
+                style={{ maxWidth: Math.min(imgSize, 280), height: 'auto' }}
               />
             </div>
-            <div className="col-md-8 text-start">
+            <div className="col-md-7 text-center text-md-start">
               <p className="lead mb-4" style={{ fontSize: '1.1rem', lineHeight: '1.7' }}>
                 {t('home:aboutMessage')}
               </p>
               {resume && (
-                <div>
+                <div className="text-center text-md-start">
                   <a
                     className="btn btn-outline-light btn-lg me-2 mb-2"
                     href={resume}
