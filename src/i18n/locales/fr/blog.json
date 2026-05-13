@@ -2,7 +2,7 @@
   "sacmi": {
     "title": "Visite de SACMI",
     "description": "La raison pour laquelle je suis passé du Génie Électrique à l'Intelligence Artificielle...",
-    "image": "/sacmi.png",
+    "image": "/sacmi.jpg",
     "content": [
       { "type": "heading", "text": "Un Intérêt Grandissant pour l'IA" },
       { "type": "paragraph", "text": "Je suis arrivé à Bologne à l'automne 2021 en tant qu'étudiant international venu de San Diego. Mes études étaient en Génie Électrique. Cependant, à UniBo, j'ai suivi le cours Intelligence Artificielle dans l'Industrie. Ce cours m'a convaincu de me réorienter vers l'IA. Je me souviens très bien de la visite de SACMI (Società Anonima Cooperativa Meccanici Imola) comme preuve que l'IA était capable d'automatiser des tâches complexes avec une précision surhumaine. Je ne connaissais pas l'entreprise auparavant, SACMI est basée à Imola en Italie et se spécialise dans la fabrication et l'emballage." },
@@ -15,7 +15,7 @@
   "roscar": {
     "title": "Véhicule Autonome avec Open CV",
     "description": "Apprendre est meilleur en groupe...",
-    "image": "/roscar.png",
+    "image": "/roscar.jpg",
     "content": [
       { "type": "heading", "text": "Robot Operating System" },
       { "type": "paragraph", "text": "Lors de ma deuxième année à UCSD, j'ai postulé pour le cours Introduction aux Véhicules Autonomes. Cette expérience était ouverte à un petit nombre de candidats, principalement des troisième et quatrième années, mais le professeur m'a accepté sur mes mérites. Je ne savais pas à quel point cela me préparerait pour UniBo Motorsport deux ans plus tard. C'est parce que cela m'a donné une brillante introduction à ROS, le firmware open source utilisé partout en robotique. En bref, ROS permet aux composants de communiquer entre eux en utilisant des topics, qui s'abonnent ou publient vers d'autres nœuds. Il gère également les packages et les dépendances, tout en permettant un fonctionnement en temps réel." },
@@ -51,7 +51,7 @@
   "drone": {
     "title": "Pilote de Drone FPV",
     "description": "Certains construisent des ordinateurs. Moi, je construis des machines volantes acrobatiques...",
-    "image": "/drone.png",
+    "image": "/drone.jpg",
     "content": [
       { "type": "heading", "text": "FPV = First Person View" },
       { "type": "paragraph", "text": "Les aéronefs radiocommandés sont mon plus ancien hobby. Ma mère a de l'expérience dans le pilotage de petits avions, et mon père aime bricoler. À partir de 11 ans, quand on m'a offert une voiture radiocommandée, la Losi Mini-T, j'ai commencé à vouloir l'emmener dans la troisième dimension. En première année de lycée, j'avais assez économisé pour acheter les pièces d'un drone QAV210 chez un vendeur chinois. Elles sont arrivées un mois plus tard, et j'ai construit le drone en suivant des tutoriels sur YouTube. J'ai appris tout seul à souder, à utiliser un multimètre et à dépanner. C'était addictif. J'ai cherché des amis dans le hobby mais j'étais trop jeune pour conduire et souvent je n'avais pas d'autre choix que de voler seul au parc. Je volais, je crashais, je reconstruisais... pendant des mois ! Finalement, j'ai maîtrisé le vol à vue et j'ai investi dans des lunettes FPV. Celles-ci utilisent une caméra à l'avant du drone pour fournir une vue cockpit à faible latence. Elles sont très immersives. Avec le temps, je me suis amélioré dans la construction de drones. Ils avaient plus d'autonomie, plus de portée et de meilleures caméras." },

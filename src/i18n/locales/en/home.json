@@ -13,7 +13,7 @@
     { "name": "English", "value": "Native" },
     { "name": "Italian", "value": "C1" },
     { "name": "Coding", "value": "Python, C++" },
-    { "name": "Frameworks", "value": "ROS2" }
+    { "name": "Frameworks", "value": "ROS2, GCP" }
   ],
   "experiences": [
     {

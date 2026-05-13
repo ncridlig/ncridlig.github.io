@@ -2,7 +2,7 @@
   "sacmi": {
     "title": "Tour of SACMI",
     "description": "The reason I pivoted from Electrical Engineering to Artifical Intelligence...",
-    "image": "/sacmi.png",
+    "image": "/sacmi.jpg",
     "content": [
       { "type": "heading", "text": "Growing Interest in AI" },
       { "type": "paragraph", "text": "I first came to Bologna in Fall 2021 as an international student visiting from San Diego. My studies were in Electrical Engineering. However, at UniBo, I sat in the class Artificial Intelligence in Industry. This class convinced me to pivot to AI. I vividly remember the tour of SACMI (Società Anonima Cooperativa Meccanici Imola) as proof that AI was capable of automating complex tasks with superhuman precision. I did not know the company beforehand, SCAMI are based in Imola in Italy, and specialize in manufacturing and packaging." },
@@ -15,7 +15,7 @@
   "roscar": {
     "title": "Open CV Autonomous Vehicle",
     "description": "Learning is better in a group...",
-    "image": "/roscar.png",
+    "image": "/roscar.jpg",
     "content": [
       { "type": "heading", "text": "Robot Operating System" },
       { "type": "paragraph", "text": "My second year at UCSD, I applied for the course Intro to Autonomous Vehicles. This experience was available to a small number of applicants, mainly third and fourth years, but the professor accepted me on my merits. Little did I know, how much it would prepare me for UniBo Motorsport two years later. This is because it gave me a brilliant introduction to ROS, the open source firmware used everywhere for robotics. In short, ROS allows components to communicate with one another using topics, which subscribe or publish to other nodes. It also manages packages and dependencies, all while allowing for real time operation." },
@@ -51,7 +51,7 @@
   "drone": {
     "title": "FPV Drone Pilot",
     "description": "Some people build computers. I build acrobatic flying machines...",
-    "image": "/drone.png",
+    "image": "/drone.jpg",
     "content": [
       { "type": "heading", "text": "FPV = First Person View" },
       { "type": "paragraph", "text": "Radio controlled aircraft are my longest running hobby. My mother has experience flying small aircraft, and my father likes tinkering. Starting from 11 years old when I was offered a radio controlled car, the Losi Mini-T, I started wishing to take it to the third dimension. As a freshman in high school, I saved enough to buy the parts for a QAV210 drone from a Chinese seller. They arrived a month later, and I built the drone by following guides on YouTube. I self-taught myself how to solder, use a multimeter, and troubleshoot. It was addictive. I searched for friends in the hobby but I was too young to drive and often had no choice but to fly by myself at the park. I would fly, crash, rebuild... for months! Eventually I got the hang of flying line of sight and invested in FPV goggles. These use a camera on the front of the drone to provide a low latency cockpit view. They are very immersive. Over time, I got better at building drones. They had more range, more flight time, and better cameras." },
