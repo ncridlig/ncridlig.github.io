@@ -41,50 +41,47 @@ const MainBody = React.forwardRef(
               </a>
             ))}
           </div>
-          <div className="row justify-content-center mb-4">
-            <div className="col-auto">
+          <div className="row justify-content-center align-items-center">
+            <div className="col-md-4 text-center mb-4 mb-md-0">
               <img
-                className="border border-secondary rounded-circle"
+                className="border border-secondary rounded-circle img-fluid"
                 src={profilePic}
                 alt="Nicolas Cridlig"
-                width={imgSize}
-                height={imgSize}
+                style={{ maxWidth: imgSize, height: 'auto' }}
               />
             </div>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
+            <div className="col-md-8 text-start">
               <p className="lead mb-4" style={{ fontSize: '1.1rem', lineHeight: '1.7' }}>
                 {t('home:aboutMessage')}
               </p>
-            </div>
-          </div>
-          {resume && (
-            <div>
-              <a
-                className="btn btn-outline-light btn-lg me-2 mb-2"
-                href={resume}
-                target="_blank"
-                rel="noreferrer noopener"
-                role="button"
-                aria-label={t('common:about.resumeAria')}
-              >
-                {t('common:about.curriculumVitae')}
-              </a>
-              {resumeFr && (
-                <a
-                  className="btn btn-outline-light btn-lg mb-2"
-                  href={resumeFr}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  role="button"
-                  aria-label={t('common:about.cvFrancaisAria')}
-                >
-                  {t('common:about.cvFrancais')}
-                </a>
+              {resume && (
+                <div>
+                  <a
+                    className="btn btn-outline-light btn-lg me-2 mb-2"
+                    href={resume}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    role="button"
+                    aria-label={t('common:about.resumeAria')}
+                  >
+                    {t('common:about.curriculumVitae')}
+                  </a>
+                  {resumeFr && (
+                    <a
+                      className="btn btn-outline-light btn-lg mb-2"
+                      href={resumeFr}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      role="button"
+                      aria-label={t('common:about.cvFrancaisAria')}
+                    >
+                      {t('common:about.cvFrancais')}
+                    </a>
+                  )}
+                </div>
               )}
             </div>
-          )}
+          </div>
         </Container>
       </Jumbotron>
     );
