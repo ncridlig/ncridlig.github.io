@@ -6,7 +6,7 @@ import { Jumbotron } from "./migration";
 
 const MainBody = React.forwardRef(
   ({ gradient, title, icons }, ref) => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
       <Jumbotron
@@ -23,7 +23,7 @@ const MainBody = React.forwardRef(
           <h1 ref={ref} className="display-1">
             {title}
           </h1>
-          <Typist>
+          <Typist key={i18n.language}>
             <div className="lead typist">
               {t('home:heroMessage')}
             </div>
