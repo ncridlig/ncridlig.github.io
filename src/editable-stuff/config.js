@@ -115,6 +115,11 @@ const experiences = {
   heading: "Experiences",
   data: [
     {
+      role: 'Innovative Sport Coach at Sana Health and Fitness',
+      companylogo: require('../assets/img/sana.png'),
+      date: 'December 2024 – June 2025',
+    },
+    {
       role: 'Driverless AI Division Manager at UniBo Motorsport',
       companylogo: require('../assets/img/ubm.png'),
       date: 'January 2021 – April 2021',
