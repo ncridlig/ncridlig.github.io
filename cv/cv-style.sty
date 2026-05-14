@@ -3,7 +3,6 @@
 % Used by both English and French versions
 % ============================================================
 \ProvidesPackage{cv-style}
-
 % --- Packages ---
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
@@ -18,24 +17,20 @@
 \RequirePackage{multicol}
 \RequirePackage{needspace}
 \RequirePackage{etoolbox}
-
 % --- Colors ---
 \definecolor{accent}{HTML}{2B579A}   % blue accent
 \definecolor{dark}{HTML}{1A1A1A}     % near-black
 \definecolor{gray}{HTML}{666666}     % secondary text
-
 % --- Hyperlinks ---
 \hypersetup{
   colorlinks=true,
   linkcolor=accent,
   urlcolor=accent
 }
-
 % --- Spacing ---
 \setlength{\parskip}{0pt}
 \setlength{\parindent}{0pt}
 \setlist{nosep,left=0pt,label=--}
-
 % --- Section formatting ---
 \titleformat{\section}
   {\Large\bfseries\color{accent}}
@@ -43,17 +38,12 @@
   {0em}
   {}
   [\vspace{-0.5em}\rule{\textwidth}{0.4pt}\vspace{0.3em}]
-
 \titlespacing{\section}{0pt}{1.2em}{0.4em}
-
 % --- Keep each section together (no section crosses a page break) ---
 \preto{\section}{\needspace{10\baselineskip}}
-
 % --- Shared contact macros ---
 \newcommand{\cvemail}{ncridlig@gmail.com}
 \newcommand{\cvphone}{+1\,858-722-2735}
 \newcommand{\cvwebsite}{ncridlig.github.io}
 \newcommand{\cvgithub}{github.com/ncridlig}
 \newcommand{\cvlinkedin}{linkedin.com/in/ncridlig}
-
-
