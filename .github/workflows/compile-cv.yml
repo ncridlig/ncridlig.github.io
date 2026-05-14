@@ -18,6 +18,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Cache apt packages (TeX Live ~2GB)
+        uses: actions/cache@v4
+        with:
+          path: /var/cache/apt/archives
+          key: apt-texlive-${{ runner.os }}-${{ runner.arch }}-v1
+
       - name: Install TeX Live
         run: |
           sudo apt-get update -qq
