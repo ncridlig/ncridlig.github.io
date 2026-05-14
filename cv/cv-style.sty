@@ -16,6 +16,8 @@
 \RequirePackage{titlesec}
 \RequirePackage{graphicx}
 \RequirePackage{multicol}
+\RequirePackage{needspace}
+\RequirePackage{etoolbox}
 
 % --- Colors ---
 \definecolor{accent}{HTML}{2B579A}   % blue accent
@@ -43,6 +45,9 @@
   [\vspace{-0.5em}\rule{\textwidth}{0.4pt}\vspace{0.3em}]
 
 \titlespacing{\section}{0pt}{1.2em}{0.4em}
+
+% --- Keep each section together (no section crosses a page break) ---
+\preto{\section}{\needspace{10\baselineskip}}
 
 % --- Shared contact macros ---
 \newcommand{\cvemail}{ncridlig@gmail.com}
